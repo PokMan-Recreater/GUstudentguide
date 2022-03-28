@@ -1,31 +1,26 @@
-﻿
-<!DOCTYPE html>
+﻿{% extends "rango/index.html" %}
+
 
 {% load static %}
 
-<html>
-<head>
-    <title>Rango</title>
-</head>
+{% block content %}
+<div>
 
-<body>
     <h1>These are the Categories.</h1>
-    <div>
-        This app is developed by University of Glasgow Students to help out new students in Glasgow to search for cheap deals.
-        <br />
-        <strong>{{ boldmessage }}</strong><br />
-    </div>
+    <h6 class="text-muted">Below you will find links to some great offers currently available!</h6>
+        <br>
+</div>
 
     <div>
         
         {% if categories %}
-        <ul>
+        <ul class="list-group list-group-item-action active">
             {% for category in categories %}
-            <li>
-                <a href="/rango/category/{{ category.slug }}/">{{ category.name }}</a>
-            </li>
+            <a class="list-group-item" href="/rango/category/{{ category.slug }}/">{{ category.name }}</a>
+  
             {% endfor %}
         </ul>
+        
         {% else %}
         <strong>There are no categories present.</strong>
         {% endif %}
@@ -46,9 +41,6 @@
         {% endif %}
     </div>
 
-    <div>
-        <a href="/rango/categories/">Categories</a><br />
+    
 
-    </div>
-</body>
-</html>
+{% endblock %}
