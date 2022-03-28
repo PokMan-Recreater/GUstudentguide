@@ -8,15 +8,12 @@
 
     <h1>These are the Categories.</h1>
     <h6 class="text-muted">Below you will find links to some great offers currently available!</h6>
-    
-
         <br>
 </div>
 
     <div>
         
         {% if categories %}
-        <h6 class="text-muted">Please select one of the links below: </h6>
         <ul class="list-group list-group-item-action active">
             {% for category in categories %}
             <a class="list-group-item" href="/rango/category/{{ category.slug }}/">{{ category.name }}</a>

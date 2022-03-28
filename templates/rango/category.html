@@ -9,18 +9,21 @@
         {% if category %}
         <h1>{{ category.name }}</h1>
         {% if pages %}
-        <ul class="list-group list-group-item-action active">
+        <ul>
             {% for page in pages %}
-            <li class="list-group-item"><a href="{{ page.url }}" target="_blank">{{ page.title }}</a></li>  
+            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
             {% endfor %}
         </ul>
-        
         {% else %}
         <strong>No pages currently in category.</strong>
         {% endif %}
         {% else %}
         The specified category does not exist.
         {% endif %}
+    </div>
+
+    <div>
+        <a href="/rango/">Index</a><br />
     </div>
 
     {% endblock %}
