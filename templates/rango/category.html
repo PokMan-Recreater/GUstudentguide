@@ -1,12 +1,10 @@
-﻿<!DOCTYPE html>
+﻿{% extends "rango/index.html" %}
 
-<html>
 
-<head>
-    <title>Rango</title>
-</head>
+
 
 <body>
+    {% block content %}
     <div>
         {% if category %}
         <h1>{{ category.name }}</h1>
@@ -27,6 +25,6 @@
     <div>
         <a href="/rango/">Index</a><br />
     </div>
-</body>
 
-</html>
+    {% endblock %}
+</body>
