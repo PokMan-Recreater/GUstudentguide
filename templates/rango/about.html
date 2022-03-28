@@ -1,23 +1,21 @@
-﻿
-<!DOCTYPE html>
+﻿{% extends "rango/index.html" %}
 
-{% load staticfiles %}
+{% load static %}
 
-<html>
-<head>
-    <title>Rango</title>
-</head>
 
-<body>
+    {% block content %}
+
     <h1>This is the about page</h1>
     <div>
-        hey! <br />
+        This app is developed by University of Glasgow Students to help out new students in Glasgow to search for cheap deals.
+        <br />
         <strong>{{ boldmessage }}</strong><br />
     </div>
     <div>
-        <a href="/rango/about/">About</a><br />
-        <img src="{% static 'images/homepage1.jpg' %}"
-             alt="GU homepage" />
+        It can be hard for students to find discounts and offers. That is why we have developed this app with the hope of giving students the best offers possible. <br />
+        <strong>{{ boldmessage }}</strong><br />
     </div>
-</body>
-</html>
+  
+    
+
+    {% endblock %}
