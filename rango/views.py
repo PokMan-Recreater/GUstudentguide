@@ -9,6 +9,16 @@ def index(request):
 
     return render(request, 'rango/index.html', context=context_dict)
     
+def about(request):
+    
+    return render(request, 'rango/about.html')
+
+def categories(request):
+    category_list = Category.objects.order_by()
+    context_dict = {}
+    
+    context_dict['categories'] = category_list
+    return render(request, 'rango/categories.html', context=context_dict)    
 
 def show_category(request, category_name_slug):
     context_dict = {}

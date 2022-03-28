@@ -1,7 +1,7 @@
 ﻿
 <!DOCTYPE html>
 
-{% load staticfiles %}
+{% load static %}
 
 <html>
 <head>
@@ -11,7 +11,16 @@
 <body>
     <h1>This is the about page</h1>
     <div>
-        hey! <br />
+        This app is developed by University of Glasgow Students to help out new students in Glasgow to search for cheap deals.
+        <br />
+        <strong>{{ boldmessage }}</strong><br />
+    </div>
+    <div>
+        We really think that all the information is out there but it is so difficult to get our hands on it as it does not lie in the open but we have done our best to help the students and to provide them with the best offers. <br />
+        <strong>{{ boldmessage }}</strong><br />
+    </div>
+    <div>
+       While making this app we specifically kept in mind the needs of International student(Including students from other parts of Europe) as most of the time they suffer the most as it is a mojor change for them to move to a University outside their home country. <br />
         <strong>{{ boldmessage }}</strong><br />
     </div>
     <div>
