@@ -7,6 +7,7 @@
 </head>
 
 <body>
+    {% block content %}
     <div>
         {% if category %}
         <h1>{{ category.name }}</h1>
@@ -27,6 +28,8 @@
     <div>
         <a href="/rango/">Index</a><br />
     </div>
+
+    {% endblock %}
 </body>
 
 </html>
